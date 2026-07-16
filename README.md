@@ -52,7 +52,7 @@ Install **Git**
 ```bash
 winget install --id Git.Git -e --source winget
 ```
-- winget and Git require administrator rights, and will prompt for the administrator password if you did not already run the Windows Command Prompt as Administrator as described above
+- winget and Git require administrator rights, and will prompt for the administrator privileges if you did not already run the Windows Command Prompt as Administrator as described above
 
 Create a directory for Git projects, if one does not exist
 ```bash
