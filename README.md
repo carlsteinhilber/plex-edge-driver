@@ -80,7 +80,7 @@ Install and set-up the **SmartThings Command Line Interface** (or CLI)
 Install or **clone this project** to your development machine
 ```bash
 # Clone this repo
-git clone https://github.com/<your-username>/plex-edge-driver.git
+git clone https://github.com/carlsteinhilber/plex-edge-driver.git
 cd plex-edge-driver
 ```
 
