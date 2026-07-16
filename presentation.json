@@ -1,0 +1,55 @@
+{
+  "dashboard": {
+    "states": [
+      {
+        "capability": "mediaPlayback",
+        "attribute": "playbackStatus"
+      }
+    ],
+    "actions": [
+      {
+        "capability": "mediaPlayback"
+      }
+    ]
+  },
+  "detailView": [
+    {
+      "capability": "audioTrackData",
+      "component": "main"
+    },
+    {
+      "capability": "mediaPlayback",
+      "component": "main"
+    },
+    {
+      "capability": "mediaTrackControl",
+      "component": "main"
+    },
+    {
+      "capability": "audioVolume",
+      "component": "main"
+    },
+    {
+      "capability": "mediaPresets",
+      "component": "main",
+      "label": "Choose a Playlist"
+    },
+    {
+      "capability": "refresh",
+      "component": "main"
+    }
+  ],
+  "automation": {
+    "conditions": [
+      {
+        "capability": "mediaPlayback",
+        "attribute": "playbackStatus"
+      }
+    ],
+    "actions": [
+      {
+        "capability": "mediaPlayback"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+# No hardware fingerprints — this driver creates its device via discovery.
+fingerprints: []

@@ -1,0 +1,70 @@
+name: plexamp-player
+components:
+  - id: main
+    capabilities:
+      - id: mediaPlayback
+        version: 1
+      - id: mediaTrackControl
+        version: 1
+      - id: audioVolume
+        version: 1
+      - id: audioTrackData
+        version: 1
+      - id: mediaPresets
+        version: 1
+      - id: refresh
+        version: 1
+    categories:
+      - name: Speaker
+preferences:
+  - name: plexServerIp
+    title: Plex Server IP
+    description: IP address of your Plex Media Server (e.g. 192.168.1.100)
+    required: true
+    preferenceType: string
+    definition:
+      stringType: text
+      default: ""
+  - name: plexServerPort
+    title: Plex Server Port
+    description: Port for Plex Media Server
+    required: false
+    preferenceType: integer
+    definition:
+      minimum: 1
+      maximum: 65535
+      default: 32400
+  - name: plexToken
+    title: Plex Token
+    description: Your X-Plex-Token authentication token
+    required: true
+    preferenceType: string
+    definition:
+      stringType: text
+      default: ""
+  - name: plexAmpIp
+    title: PlexAmp IP
+    description: IP address of your headless PlexAmp instance
+    required: true
+    preferenceType: string
+    definition:
+      stringType: text
+      default: ""
+  - name: plexAmpPort
+    title: PlexAmp Port
+    description: PlexAmp HTTP API port
+    required: false
+    preferenceType: integer
+    definition:
+      minimum: 1
+      maximum: 65535
+      default: 32500
+  - name: pollInterval
+    title: Poll Interval (seconds)
+    description: How often to refresh playback status
+    required: false
+    preferenceType: integer
+    definition:
+      minimum: 5
+      maximum: 300
+      default: 30

@@ -1,0 +1,5 @@
+name: PlexAmp Player
+packageKey: plexamp-player-v2
+permissions:
+  lan: {}
+  discovery: {}
