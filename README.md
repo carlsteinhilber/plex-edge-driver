@@ -1,6 +1,6 @@
 # SmartThings Edge Driver — PlexAmp Player
 
-<table>
+<table style="border: none;" border="0">
   <tr style="border: none;">
     <td valign="top" style="border: none;">
       <p>A SmartThings Edge Driver that connects your SmartThings hub directly to a local Plex Media Server and controls a headless PlexAmp instance over your LAN.</p>
