@@ -8,7 +8,7 @@ Plex Media Server and controls a headless PlexAmp instance over your LAN.
 Useful if you have a PlexAmp instance connected directly to an amplifier or streamer
 and want to control it from the SmartThings app (including routines and voice control).
 
-<ul>
+<ul width="50%">
 <li><strong>Playlist picker</strong> — browse all your Plex audio playlists and start one with a tap (plays shuffled)</li>
 <li><strong>Now Playing</strong> — track title, artist, album, and current playlist update automatically</li>
 <li><strong>Playback controls</strong> — play, pause, stop, next track, previous track</li>
