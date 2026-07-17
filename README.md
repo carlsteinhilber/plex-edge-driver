@@ -26,10 +26,10 @@ Useful if you have a PlexAmp instance connected directly to an amplifier or stre
 - A separate **desktop or laptop** running:
    - **Python 3**
    - **SmartThings CLI**
-- **SmartThings Hub V2** (or later) on the same LAN as the PlexAmp instance[^1]
+- **SmartThings Hub V2** (or later) on the same LAN as the PlexAmp instance<sup>[1]</sup>
 - **Plex Media Server** (assumed running on your LAN, port 32400)
 
-[^1] should also work with Aeotec hubs, but has not been tested
+<small>[1] should also work with Aeotec hubs, but has not been tested</small>
 
 <br clear="all" />
 ---
