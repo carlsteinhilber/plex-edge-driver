@@ -30,8 +30,10 @@ Useful if you have a PlexAmp instance connected directly to an amplifier or stre
 <small>[1] should also work with Aeotec hubs, but has not been tested</small>
 
     </td>
-    <td valign="top" width="350" style="border: none; padding-left: 20px;">
-      <img src="plex-driver-card-2026.gif" width="330" alt="Plex Driver Card" />
+    <td valign="top" width="350" style="border: none;">
+
+<img src="plex-driver-card-2026.gif" width="330" alt="Plex Driver Card" />
+
     </td>
   </tr>
 </table>
