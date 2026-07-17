@@ -1,42 +1,40 @@
 # SmartThings Edge Driver — PlexAmp Player
 
-<table>
-<tr>
-<td valign="top">
+<details open>
+<summary style="float: right; list-style: none; outline: none; pointer-events: none;">
+  <img src="plex-driver-card-2026.gif" width="330" alt="Plex Driver Card" />
+</summary>
 
-A SmartThings Edge Driver that connects your SmartThings hub directly to a local Plex Media Server and controls a headless PlexAmp instance over your LAN.
+A SmartThings Edge Driver that connects your SmartThings hub directly to a local
+Plex Media Server and controls a headless PlexAmp instance over your LAN.
 
-Useful if you have a PlexAmp instance connected directly to an amplifier or streamer, and want to control it from the SmartThings app (including routines and voice control).
+Useful if you have a PlexAmp instance connected directly to an amplifier or streamer, and want to control it from the SmartThings app (including routines and voice control)
 
 ### Features
 
-* **Playlist picker** — browse all your Plex audio playlists and start one with a tap (plays shuffled)
-* **Now Playing** — track title, artist, album, and current playlist update automatically
-* **Playback controls** — play, pause, stop, next track, previous track
-* **Volume control** — 0–100 slider mapped directly to PlexAmp's volume
-* **Auto-refresh** — polls PlexAmp on a configurable interval (default 30 s)
-* **Instant update** — Now Playing refreshes immediately when you select a playlist
-* Fully local — all communication stays on your LAN
+- **Playlist picker** — browse all your Plex audio playlists and start one with a tap (plays shuffled)
+- **Now Playing** — track title, artist, album, and current playlist update automatically
+- **Playback controls** — play, pause, stop, next track, previous track
+- **Volume control** — 0–100 slider mapped directly to PlexAmp's volume
+- **Auto-refresh** — polls PlexAmp on a configurable interval (default 30 s)
+- **Instant update** — Now Playing refreshes immediately when you select a playlist
+- Fully local — all communication stays on your LAN
+
 
 ### Requirements
 
-* **Headless PlexAmp** (running on a Raspberry Pi or other device)
-* A separate **desktop or laptop** running:
-    * **Python 3**
-    * **SmartThings CLI**
-* **SmartThings Hub V2** (or later) on the same LAN as the PlexAmp instance<sup>[1]</sup>
-* **Plex Media Server** (assumed running on your LAN, port 32400)
+- **Headless PlexAmp** (running on a Raspberry Pi or other device)
+- A separate **desktop or laptop** running:
+   - **Python 3**
+   - **SmartThings CLI**
+- **SmartThings Hub V2** (or later) on the same LAN as the PlexAmp instance<sup></sup>
+- **Plex Media Server** (assumed running on your LAN, port 32400)
 
-<small>[1] should also work with Aeotec hubs, but has not been tested</small>
+<small> should also work with Aeotec hubs, but has not been tested</small>
 
-</td>
-<td valign="top" width="350">
+</details>
 
-&nbsp; &nbsp; <img src="plex-driver-card-2026.gif" width="330" alt="Plex Driver Card" />
-
-</td>
-</tr>
-</table>
+<br clear="all" />
 
 ---
 
