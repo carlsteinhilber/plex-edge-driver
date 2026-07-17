@@ -40,9 +40,6 @@ and want to control it from the SmartThings app (including routines and voice co
 
 ---
 
-
----
-
 ## Setup
 
 ### 1. Set up the development system
