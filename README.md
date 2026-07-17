@@ -1,6 +1,6 @@
 # SmartThings Edge Driver — PlexAmp Player
 
-<img align="right" width="330" src="plex-driver-card-2026.gif" style="padding-bottom:30px; padding-left:30px;" />
+<img align="right" width="330" src="plex-driver-card-2026.gif" style="margin-left:30px; padding-bottom:30px; padding-left:60px;" />
 
 
 A SmartThings Edge Driver that connects your SmartThings hub directly to a local
