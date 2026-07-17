@@ -10,6 +10,7 @@ local plexamp  = require('plexamp')
 
 local function get_prefs(device)
   local p = device.preferences
+  if not p then return nil end  -- device being deleted or uninitialized
   return {
     server_ip   = p.plexServerIp  or '',
     server_port = tonumber(p.plexServerPort) or 32400,
@@ -21,6 +22,7 @@ local function get_prefs(device)
 end
 
 local function prefs_valid(p)
+  if not p then return false end
   return p.server_ip ~= '' and p.token ~= '' and p.amp_ip ~= ''
 end
 
@@ -67,9 +69,11 @@ local function update_now_playing(device)
   if info.album  then track_data.album  = info.album  end
   local playlist_name = device:get_field('current_playlist')
   if playlist_name then track_data.mediaSource = playlist_name end
-  if next(track_data) then
-    device:emit_event(caps.audioTrackData.audioTrackData({value = track_data}))
+  if not next(track_data) then
+    local state = info.state or 'stopped'
+    track_data.title = state == 'paused' and 'Paused' or 'Not playing'
   end
+  device:emit_event(caps.audioTrackData.audioTrackData({value = track_data}))
 
   if info.volume then
     local vol = tonumber(info.volume)
@@ -135,6 +139,10 @@ local function start_polling(driver, device)
     update_now_playing(device)
     while true do
       local p = get_prefs(device)
+      if not p then
+        log.info('[plexamp] polling stopped — device no longer valid')
+        return
+      end
       cosock.socket.sleep(p.poll_secs)
       update_now_playing(device)
     end
@@ -257,16 +265,21 @@ end
 
 local function handle_discovery(driver, _opts, should_continue)
   log.info('[plexamp] discovery')
-  if #driver:get_devices() == 0 then
-    local ok, err = driver:try_create_device({
-      type              = 'LAN',
-      device_network_id = 'plexamp-player-001',
-      label             = 'PlexAmp Player',
-      profile           = 'plexamp-player',
-      manufacturer      = 'Plex',
-      model             = 'PlexAmp Headless',
-    })
-    if not ok then log.error('[plexamp] try_create_device: ' .. tostring(err)) end
+  local ok, err = driver:try_create_device({
+    type              = 'LAN',
+    device_network_id = 'plexamp-player',
+    label             = 'PlexAmp Player',
+    profile           = 'plexamp-player',
+    manufacturer      = 'Plex',
+    model             = 'PlexAmp Headless',
+  })
+  if not ok then
+    local msg = tostring(err)
+    if msg:find('DNI already exists') then
+      log.info('[plexamp] device already registered — skipping creation')
+    else
+      log.error('[plexamp] try_create_device: ' .. msg)
+    end
   end
 end
 

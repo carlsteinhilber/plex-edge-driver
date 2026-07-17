@@ -2,7 +2,6 @@
 
 A SmartThings Edge Driver that connects your SmartThings hub directly to a local
 Plex Media Server and controls a headless PlexAmp instance over your LAN.
-No cloud relay, no external services — everything runs locally.
 
 Useful if you have a PlexAmp instance connected directly to an amplifier or streamer, and want to control it from the SmartThings app (including routines and voice control)
 
@@ -272,6 +271,8 @@ runtimes don't provide `socket.http` or `ltn12`.
   in the `mediaPresets` capability and cannot be overridden from the driver.
 - Playlist names containing emoji are displayed with the emoji stripped (SmartThings
   rejects non-ASCII characters in preset names).
+- All Plex and PlexAmp communication is local — no Plex data or audio leaves your LAN. SmartThings app commands travel through SmartThings' cloud before reaching the hub; this is inherent to how SmartThings works and applies to every SmartThings device, not just this driver.
+
 
 ---
 

@@ -42,7 +42,7 @@ local function amp_get(amp_ip, amp_port, path, extra_params)
     return nil, 'tcp() failed: ' .. tostring(err)
   end
 
-  client:settimeout(10)
+  client:settimeout(5)
   local ok, connect_err = client:connect(amp_ip, amp_port)
   if not ok then
     client:close()
@@ -61,22 +61,30 @@ local function amp_get(amp_ip, amp_port, path, extra_params)
 
   client:send(request)
 
-  local chunks = {}
+  -- Read until we have a complete HTTP response (don't wait for connection close)
+  local response = ''
+  local hdr_end  = nil
+  local clen     = nil
   while true do
-    local chunk, recv_err, partial = client:receive(4096)
-    if chunk then
-      table.insert(chunks, chunk)
-    else
-      if partial and #partial > 0 then
-        table.insert(chunks, partial)
+    local chunk, _, partial = client:receive(4096)
+    local data = chunk or (partial ~= '' and partial) or nil
+    if data then
+      response = response .. data
+      if not hdr_end then
+        hdr_end = response:find('\r\n\r\n')
+        if hdr_end then
+          clen = tonumber(response:match('[Cc]ontent%-[Ll]ength:%s*(%d+)'))
+        end
       end
-      break
+      if hdr_end and clen ~= nil then
+        if #response - (hdr_end + 3) >= clen then break end
+      end
     end
+    if not chunk then break end
   end
   client:close()
 
-  local response = table.concat(chunks)
-  local status   = tonumber(response:match('^HTTP/%S+ (%d+)'))
+  local status = tonumber(response:match('^HTTP/%S+ (%d+)'))
 
   if not status or (status ~= 200 and status ~= 204) then
     return nil, 'PlexAmp HTTP status ' .. tostring(status or 'unknown')
