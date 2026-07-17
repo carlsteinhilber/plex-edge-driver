@@ -1,7 +1,6 @@
 # SmartThings Edge Driver — PlexAmp Player
 
-<table><tr>
-<td valign="top">
+<img align="right" width="300" src="plex-driver-card-2026.gif">
 
 A SmartThings Edge Driver that connects your SmartThings hub directly to a local
 Plex Media Server and controls a headless PlexAmp instance over your LAN.
@@ -9,21 +8,17 @@ Plex Media Server and controls a headless PlexAmp instance over your LAN.
 Useful if you have a PlexAmp instance connected directly to an amplifier or streamer
 and want to control it from the SmartThings app (including routines and voice control).
 
-**Features**
+<ul>
+<li><strong>Playlist picker</strong> — browse all your Plex audio playlists and start one with a tap (plays shuffled)</li>
+<li><strong>Now Playing</strong> — track title, artist, album, and current playlist update automatically</li>
+<li><strong>Playback controls</strong> — play, pause, stop, next track, previous track</li>
+<li><strong>Volume control</strong> — 0–100 slider mapped directly to PlexAmp's volume</li>
+<li><strong>Auto-refresh</strong> — polls PlexAmp on a configurable interval (default 30 s)</li>
+<li><strong>Instant update</strong> — Now Playing refreshes immediately when you select a playlist</li>
+<li>Fully local — all Plex communication stays on your LAN</li>
+</ul>
 
-- **Playlist picker** — browse all your Plex audio playlists and start one with a tap (plays shuffled)
-- **Now Playing** — track title, artist, album, and current playlist update automatically
-- **Playback controls** — play, pause, stop, next track, previous track
-- **Volume control** — 0–100 slider mapped directly to PlexAmp's volume
-- **Auto-refresh** — polls PlexAmp on a configurable interval (default 30 s)
-- **Instant update** — Now Playing refreshes immediately when you select a playlist
-- Fully local — all Plex communication stays on your LAN
-
-</td>
-<td valign="top" align="right">
-<img width="330" src="plex-driver-card-2026.gif" />
-</td>
-</tr></table>
+<br clear="right">
 
 ---
 
