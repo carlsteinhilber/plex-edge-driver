@@ -1,2 +1,5 @@
 # SmartThings CLI build artifact
 *.zip
+
+*.psd
+*.ai
