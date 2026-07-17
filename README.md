@@ -1,10 +1,10 @@
 # SmartThings Edge Driver — PlexAmp Player
 
-<dl>
-  <dt style="float: right; margin: 0 0 10px 20px;">
-    <img src="plex-driver-card-2026.gif" width="330" alt="Plex Driver Card" />
-  </dt>
-  <dd style="margin: 0;">
+<p align="right">
+  <img src="plex-driver-card-2026.gif" width="330" alt="Plex Driver Card" />
+</p>
+
+<div style="margin-right: 360px;">
 
 A SmartThings Edge Driver that connects your SmartThings hub directly to a local
 Plex Media Server and controls a headless PlexAmp instance over your LAN.
@@ -21,20 +21,19 @@ Useful if you have a PlexAmp instance connected directly to an amplifier or stre
 - **Instant update** — Now Playing refreshes immediately when you select a playlist
 - Fully local — all communication stays on your LAN
 
-
 ### Requirements
 
 - **Headless PlexAmp** (running on a Raspberry Pi or other device)
 - A separate **desktop or laptop** running:
    - **Python 3**
    - **SmartThings CLI**
-- **SmartThings Hub V2** (or later) on the same LAN as the PlexAmp instance<sup>[1]</sup>
+- **SmartThings Hub V2** (or later) on the same LAN as the PlexAmp instance<sup></sup>
 - **Plex Media Server** (assumed running on your LAN, port 32400)
 
-<small>[1] should also work with Aeotec hubs, but has not been tested</small>
+<small> should also work with Aeotec hubs, but has not been tested</small>
 
-  </dd>
-</dl>
+</div>
+
 <br clear="all" />
 
 ---
