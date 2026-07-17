@@ -8,7 +8,7 @@ Plex Media Server and controls a headless PlexAmp instance over your LAN.
 
 Useful if you have a PlexAmp instance connected directly to an amplifier or streamer, and want to control it from the SmartThings app (including routines and voice control)
 
-## Features
+### Features
 
 - **Playlist picker** — browse all your Plex audio playlists and start one with a tap (plays shuffled)
 - **Now Playing** — track title, artist, album, and current playlist update automatically
@@ -18,9 +18,8 @@ Useful if you have a PlexAmp instance connected directly to an amplifier or stre
 - **Instant update** — Now Playing refreshes immediately when you select a playlist
 - Fully local — all communication stays on your LAN
 
----
 
-## Requirements
+### Requirements
 
 - **Headless PlexAmp** (running on a Raspberry Pi or other device)
 - A separate **desktop or laptop** running:
@@ -32,6 +31,7 @@ Useful if you have a PlexAmp instance connected directly to an amplifier or stre
 <small>[1] should also work with Aeotec hubs, but has not been tested</small>
 
 <br clear="all" />
+
 ---
 
 ## Setup
