@@ -1,5 +1,8 @@
 # SmartThings Edge Driver — PlexAmp Player
 
+<img align="right" width="330" src="plex-driver-card-2026.gif" style="padding-bottom:30px; padding-left:30px;" />
+
+
 A SmartThings Edge Driver that connects your SmartThings hub directly to a local
 Plex Media Server and controls a headless PlexAmp instance over your LAN.
 
@@ -26,9 +29,9 @@ Useful if you have a PlexAmp instance connected directly to an amplifier or stre
 - **SmartThings Hub V2** (or later) on the same LAN as the PlexAmp instance[^1]
 - **Plex Media Server** (assumed running on your LAN, port 32400)
 
-<small>[^1] should also work with Aeotec hubs, but has not been tested</small>
+[^1] should also work with Aeotec hubs, but has not been tested
 
-
+<br clear="all" />
 ---
 
 ## Setup
